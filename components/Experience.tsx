@@ -72,7 +72,7 @@ export function Experience() {
                   key={index}
                   className={`grid grid-cols-1 gap-8 items-center ${
                     isCenter
-                      ? 'md:grid-cols-1 md:max-w-2xl md:mx-auto'
+                      ? 'md:grid-cols-1 md:max-w-3xl md:mx-auto'
                       : 'md:grid-cols-[1fr_auto_1fr]'
                   }`}
                 >
