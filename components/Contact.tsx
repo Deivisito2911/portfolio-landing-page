@@ -8,14 +8,14 @@ export function Contact() {
       icon: Mail,
       label: 'Email',
       value: 'ZDEIVITH@GMAIL.COM',
-      href: 'mailto:ZDEIVITH@GMAIL.COM',
+      href: 'https://gmail.com/',
       color: 'from-primary to-primary/50',
     },
     {
       icon: Phone,
       label: 'Teléfono',
       value: '(+58) 4129672251',
-      href: 'tel:+584129672251',
+      href: 'https://wa.me/584129672251',
       color: 'from-accent to-accent/50',
     },
     {

@@ -56,7 +56,7 @@ export function Hero() {
           </button>
           <a
             href="/Deivith_Cv_2026.pdf"
-            download
+            download="Deivith_Cv_2026.pdf"
             className="px-8 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
           >
             <Download size={20} />

@@ -64,29 +64,25 @@ export function Experience() {
           {/* Experience Cards */}
           <div className="space-y-12">
             {experiences.map((exp, index) => {
+              // Alternar izquierda y derecha estrictamente
               const isLeft = index % 2 === 0;
-              const isCenter = index % 3 === 1;
               
               return (
                 <div
                   key={index}
-                  className={`grid grid-cols-1 gap-8 items-center ${
-                    isCenter
-                      ? 'md:grid-cols-1 md:max-w-2xl md:mx-auto'
-                      : 'md:grid-cols-[1fr_auto_1fr]'
-                  }`}
+                  className="grid grid-cols-1 gap-8 items-center md:grid-cols-[1fr_auto_1fr]"
                 >
-                  {/* Left Content (for first and third) */}
-                  {isLeft && !isCenter && (
+                  {/* Left Column Content */}
+                  {isLeft ? (
                     <div className="md:text-right md:pr-12">
-                      <div className="bg-secondary/50 border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300">
+                      <div className="bg-secondary/50 border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 relative">
                         <h3 className="text-2xl font-bold text-foreground mb-2">
                           {exp.position}
                         </h3>
                         <p className="text-primary font-semibold mb-2">
                           {exp.company}
                         </p>
-                        <div className="flex items-center justify-end gap-2 text-foreground/60 mb-4">
+                        <div className="flex items-center md:justify-end gap-2 text-foreground/60 mb-4">
                           <Calendar size={16} />
                           <span className="text-sm">{exp.duration}</span>
                         </div>
@@ -95,58 +91,29 @@ export function Experience() {
                           {exp.highlights.map((highlight, i) => (
                             <li
                               key={i}
-                              className="text-sm text-foreground/70 flex items-center justify-end gap-2"
+                              className="text-sm text-foreground/70 flex items-center md:justify-end gap-2"
                             >
-                              <span>•</span>
+                              <span className="hidden md:inline">•</span>
                               <span>{highlight}</span>
+                              <span className="md:hidden">•</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
+                  ) : (
+                    <div className="hidden md:block"></div> // Espaciador para la columna izquierda
                   )}
 
-                  {/* Center Content (for Sky Airline) */}
-                  {isCenter && (
-                    <div>
-                      <div className="bg-secondary/50 border border-border rounded-xl p-6 hover:border-accent/50 transition-all duration-300 w-full">
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
-                          {exp.position}
-                        </h3>
-                        <p className="text-accent font-semibold mb-2">
-                          {exp.company}
-                        </p>
-                        <div className="flex items-center gap-2 text-foreground/60 mb-4">
-                          <Calendar size={16} />
-                          <span className="text-sm">{exp.duration}</span>
-                        </div>
-                        <p className="text-foreground/80 mb-4">{exp.description}</p>
-                        <ul className="space-y-2">
-                          {exp.highlights.map((highlight, i) => (
-                            <li
-                              key={i}
-                              className="text-sm text-foreground/70 flex items-center gap-2"
-                            >
-                              <span>•</span>
-                              <span>{highlight}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  )}
+                  {/* Timeline Dot (Center) */}
+                  <div className="hidden md:flex justify-center relative">
+                    <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg shadow-primary/50 z-10"></div>
+                  </div>
 
-                  {/* Timeline Dot */}
-                  {!isCenter && (
-                    <div className="hidden md:flex justify-center">
-                      <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg shadow-primary/50 z-10"></div>
-                    </div>
-                  )}
-
-                  {/* Right Content (empty for left items) */}
-                  {!isLeft && !isCenter && (
+                  {/* Right Column Content */}
+                  {!isLeft ? (
                     <div className="md:pl-12">
-                      <div className="bg-secondary/50 border border-border rounded-xl p-6 hover:border-accent/50 transition-all duration-300">
+                      <div className="bg-secondary/50 border border-border rounded-xl p-6 hover:border-accent/50 transition-all duration-300 relative">
                         <h3 className="text-2xl font-bold text-foreground mb-2">
                           {exp.position}
                         </h3>
@@ -171,13 +138,8 @@ export function Experience() {
                         </ul>
                       </div>
                     </div>
-                  )}
-
-                  {/* Mobile Timeline Dot */}
-                  {isLeft && (
-                    <div className="md:hidden flex justify-start ml-6 -mt-4">
-                      <div className="w-3 h-3 bg-primary rounded-full border-3 border-background shadow-lg shadow-primary/50"></div>
-                    </div>
+                  ) : (
+                    <div className="hidden md:block"></div> // Espaciador para la columna derecha
                   )}
                 </div>
               );
