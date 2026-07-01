@@ -19,7 +19,7 @@ export function Projects() {
         'Sitio web institucional del colegio con información de programas, galería de eventos, portal de estudiantes y sistema de comunicación.',
       link: 'https://www.mapis.com.ve/',
       image: '/projects/mapis.png',
-      tags: ['Web Institucional', 'CMS', 'Responsive Design'],
+      tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     },
     {
       title: 'Agua y Vacío',
@@ -27,7 +27,7 @@ export function Projects() {
         'Diseño y desarrollo web para cliente de arte contemporáneo. Portafolio interactivo con galería de obras, información del artista y sistema de contacto.',
       link: 'https://v0-agua-y-vacio-website.vercel.app/',
       image: '/projects/agua-y-vacio.png',
-      tags: ['Portfolio', 'Design', 'Next.js'],
+      tags: ['Next.js', 'React', 'Tailwind CSS', 'Cloudinary'],
     },
   ];
 
