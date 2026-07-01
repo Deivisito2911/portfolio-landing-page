@@ -17,7 +17,7 @@ export function Projects() {
       title: 'Colegio Mariano Picón Salas',
       description:
         'Sitio web institucional del colegio con información de programas, galería de eventos, portal de estudiantes y sistema de comunicación.',
-      link: 'https://www.mapis.com.ve/',
+      link: 'https://ue-mariano-picon-salas.vercel.app/',
       image: '/projects/mapis.png',
       tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion','Cloudinary'],
     },
