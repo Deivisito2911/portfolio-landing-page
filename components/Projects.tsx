@@ -11,7 +11,7 @@ export function Projects() {
         'Plataforma integral de tesis de grado para gestión y distribución de donaciones de insumos médicos. Sistema full-stack con autenticación, gestión de usuarios y reportes.',
       link: 'https://sistema-donaciones-six.vercel.app/',
       image: '/projects/donation-system.png',
-      tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+      tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS','AWS','Docker','PostgreSQL','Prisma ORM'],
     },
     {
       title: 'Colegio Mariano Picón Salas',
