@@ -10,19 +10,12 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Deivith Zanella | Desarrollador Web & QA Tester',
+  description: 'Portafolio profesional de Deivith Zanella - Desarrollador Web Frontend, Analista QA y Profesor de Robótica. Especializado en Next.js, React y testing.',
+  keywords: ['Desarrollador Web', 'Frontend', 'QA Testing', 'Next.js', 'React', 'Robótica'],
   generator: 'v0.app',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
       {
         url: '/icon.svg',
         type: 'image/svg+xml',
@@ -30,14 +23,17 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
+  openGraph: {
+    title: 'Deivith Zanella | Desarrollador Web & QA Tester',
+    description: 'Portafolio profesional de Deivith Zanella - Desarrollador Web Frontend, Analista QA y Profesor de Robótica.',
+    url: 'https://deivith-zanella.vercel.app',
+    type: 'website',
+  },
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'dark',
+  themeColor: '#0f0f1e',
 }
 
 export default function RootLayout({
