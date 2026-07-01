@@ -26,7 +26,7 @@ export function Projects() {
       description:
         'Diseño y desarrollo web para cliente de arte contemporáneo. Portafolio interactivo con galería de obras, información del artista y sistema de contacto.',
       link: 'https://v0-agua-y-vacio-website.vercel.app/',
-      image: '/projects/agua-y-vacio.png',
+      image: '/projects/agua-vacio.png',
       tags: ['Next.js', 'React', 'Tailwind CSS'],
     },
   ];
